@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+:root {
+  --font-title: "Raleway", sans-serif;
+  --font-title-secondary: "Michroma", sans-serif;
+  --font-description: "Josefin Sans", sans-serif;
+  --font-techs: "Ubuntu Mono", monospace;
+
+  --background-lightmode: #f4f7fc;
+  --background-darkmode: #021430;
+
+  --background-menu-lightmode: #c09256;
+  --background-menu-darkmode: #243758;
+
+  --color-blue-light: #0979b0;
+
+  --text-color-lightmode: #000000;
+  --text-color-darkmode: #f4f7fc;
+}
+
+body {
+  font-size: 16px;
+}
+
+* {
+  background-color: var(--background-lightmode);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
