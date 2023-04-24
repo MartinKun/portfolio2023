@@ -2,19 +2,12 @@
     display: none;
 }
 
-.hamburguer.lightmode {
-    background-color: var(--background-menu-lightmode);
-}
-
-.hamburguer.darkmode {
-    background-color: var(--background-menu-darkmode);
-}
-
 .hamburguer {
     width: 38px;
     height: 28px;
     position: relative;
-    z-index: 2;
+    z-index: var(--z-3);
+    background: none;
 }
 
 .firstLineHamburguer {
@@ -22,7 +15,7 @@
     width: 20px;
     height: 4px;
     top: 0;
-    background-color: var(--color-blue-light);
+    background-color: var(--light-blue);
     transition: 0.4s;
 
     animation: rotateClosedFirstLine 0.2s;
@@ -34,7 +27,7 @@
     height: 4px;
     top: 45%;
 
-    background-color: var(--color-blue-light);
+    background-color: var(--light-blue);
     animation: showSecondLine 0.2s;
 }
 
@@ -44,7 +37,7 @@
     height: 4px;
     bottom: 0;
     right: 0;
-    background-color: var(--color-blue-light);
+    background-color: var(--light-blue);
     transition: 0.4s;
 
     animation: rotateClosedThirdLine 0.2s;
@@ -56,7 +49,7 @@
     transform: rotate(45deg) translateX(10px) translateY(10px);
     height: 4px;
     top: 0;
-    background-color: var(--color-blue-light);
+    background-color: var(--light-blue);
     transition: 0.4s;
 
     animation: rotateHamburguerFirstLine 0.2s;
@@ -69,7 +62,7 @@
     height: 4px;
     top: 45%;
 
-    background-color: var(--color-blue-light);
+    background-color: var(--light-blue);
     animation: hideSecondLine 0.2s;
 }
 
@@ -80,7 +73,7 @@
     height: 4px;
     top: 0;
     right: 0;
-    background-color: var(--color-blue-light);
+    background-color: var(--light-blue);
     transition: 0.4s;
 
     animation: rotateHamburguerThirdLine 0.2s;

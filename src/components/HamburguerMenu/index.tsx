@@ -9,20 +9,14 @@ const HamburguerMenu = ({ setIsMenuOpened, isMenuOpened }: Props) => {
   return (
     <div className="toggleHamburguer">
       {!isMenuOpened && (
-        <div
-          className="hamburguer darkmode"
-          onClick={() => setIsMenuOpened(true)}
-        >
+        <div className="hamburguer" onClick={() => setIsMenuOpened(true)}>
           <div className="firstLineHamburguer"></div>
           <div className="secondLineHamburguer"></div>
           <div className="thirdLineHamburguer"></div>
         </div>
       )}
       {isMenuOpened && (
-        <div
-          className="hamburguer darkmode"
-          onClick={() => setIsMenuOpened(false)}
-        >
+        <div className="hamburguer" onClick={() => setIsMenuOpened(false)}>
           <div className="firstLineClosed"></div>
           <div className="secondLineClosed"></div>
           <div className="thirdLineClosed"></div>

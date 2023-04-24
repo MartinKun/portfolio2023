@@ -3,15 +3,21 @@ import Container from "../Container";
 import Logo from "../Logo";
 import "./index.css";
 import HamburguerMenu from "../HamburguerMenu";
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
+import ThemeContext from "../../context/ThemeContext";
 
 const Header = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const { isLightOn } = useContext(ThemeContext);
 
   return (
     <nav>
       <Container>
-        <div className={`nav-content darkmode ${!isMenuOpened && "close"}`}>
+        <div
+          className={`nav-content ${isLightOn ? "light" : "dark"} ${
+            !isMenuOpened && "close"
+          }`}
+        >
           <div>
             <Logo />
           </div>

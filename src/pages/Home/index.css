@@ -1,0 +1,46 @@
+.home {
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    display: flex;
+    overflow: hidden;
+}
+
+.title-column {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    row-gap: 10px;
+}
+
+.title-column h1 {
+    font-family: var(--font-title);
+    color: var(--light-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.title-column.light span {
+    color: var(--black);
+    transition: background-color 0.2s ease;
+}
+
+.title-column.dark span {
+    color: var(--white);
+    transition: background-color 0.2s ease;
+}
+
+@media (max-width: 360px) {
+
+    .home {
+        flex-direction: column;
+        row-gap: 40px;
+        height: inherit;
+        padding-top: 40px;
+    }
+
+    .title-column {
+        font-size: 1.5rem;
+    }
+}

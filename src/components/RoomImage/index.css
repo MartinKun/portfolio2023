@@ -1,0 +1,152 @@
+.outline {
+    width: 726px;
+    height: 643px;
+    position: relative;
+}
+
+.room-image-container {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+}
+
+.room-image {
+    width: 4358px;
+    height: 643px;
+}
+
+.click-sector {
+    position: absolute;
+    background: none;
+    transform: rotate(32deg);
+    z-index: var(--z-2);
+}
+
+.hand {
+    position: absolute;
+    background: none;
+    z-index: var(--z-1);
+}
+
+.hand>* {
+    background: none;
+}
+
+/*----------------- Animations -----------------*/
+
+
+@keyframes pressButton {
+    0% {
+        opacity: 0%;
+        transform: rotateX(-180deg) rotate(-10deg) translateY(35px);
+    }
+
+    10% {
+        transform: rotateX(-180deg) rotate(-10deg) translateY(2px);
+    }
+
+    20% {
+        transform: rotateX(-180deg) rotate(-10deg) translateY(35px);
+    }
+
+    30% {
+        opacity: 100%;
+        transform: rotateX(-180deg) rotate(-10deg) translateY(2px);
+    }
+
+    40% {
+        transform: rotateX(-180deg) rotate(-10deg) translateY(35px);
+    }
+
+    50% {
+        opacity: 100%;
+        transform: rotateX(-180deg) rotate(-10deg) translateY(2px);
+    }
+
+    65% {
+        opacity: 0%;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotateX(-180deg) rotate(-10deg) translateY(2px);
+    }
+}
+
+@media (max-width: 360px) {
+
+    .outline {
+        width: 300px;
+        height: 266px;
+        position: relative;
+    }
+
+    .room-image-container {
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+        transform: translateX(5%);
+        position: relative;
+    }
+
+    .room-image {
+        position: absolute;
+        width: 1802px;
+        height: 266px;
+    }
+
+    .room-image.light {
+        left: 0px;
+        animation: iluminate1 0.05s steps(5) forwards;
+    }
+
+    .room-image.dark {
+        left: -1502px;
+        animation: darken1 0.05s steps(5) forwards;
+    }
+
+    .click-sector {
+        width: 90px;
+        height: 50px;
+        bottom: 5px;
+        right: -20px;
+    }
+
+    .hand {
+        bottom: 0px;
+        right: 25px;
+        transform: rotate(-20deg);
+        width: fit-content;
+        height: 200px;
+    }
+
+    .hand>* {
+        animation: pressButton 5s infinite ease-out;
+        width: 40px;
+    }
+}
+
+@keyframes iluminate1 {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -1502px;
+    }
+}
+
+@keyframes darken1 {
+    0% {
+        left: -1502px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}

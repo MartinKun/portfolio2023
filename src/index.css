@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
@@ -9,24 +9,24 @@
   --font-description: "Josefin Sans", sans-serif;
   --font-techs: "Ubuntu Mono", monospace;
 
-  --background-lightmode: #f4f7fc;
-  --background-darkmode: #021430;
+  --dark-blue: #021430;
+  --white: #f4f7fc;
+  --black: #000000;
+  --slate-blue: #243758;
+  --light-blue: #0979b0;
 
-  --background-menu-lightmode: #c09256;
-  --background-menu-darkmode: #243758;
-
-  --color-blue-light: #0979b0;
-
-  --text-color-lightmode: #000000;
-  --text-color-darkmode: #f4f7fc;
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
 }
 
 body {
   font-size: 16px;
+  height: 100vh;
+  width: 100%;
 }
 
 * {
-  background-color: var(--background-lightmode);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
